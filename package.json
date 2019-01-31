@@ -5,6 +5,7 @@
   "main": "sketch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/concurrently 'node server.js' 'npm run watch'",
     "build": "browserify index.js -o dist/bundle.js",
     "watch": "watchify index.js -o dist/bundle.js -v"
   },
@@ -15,6 +16,7 @@
     "browserify": "^16.2.3",
     "canvas-sketch": "^0.2.0",
     "canvas-sketch-util": "^1.6.0",
+    "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "http": "0.0.0",
     "morgan": "^1.9.1",
